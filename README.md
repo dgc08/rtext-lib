@@ -4,9 +4,8 @@ I created this library to read input from the  Console in Rust customized to my 
 
 ## Installation
 
-Just add the following line to your 
+Just add the following line to your `Cargo.toml`
 
-`Cargo.toml`
 `rtext = {git = "https://github.com/dgc08/rtext-lib"}`
 
 ## Use of the library
@@ -19,7 +18,7 @@ It is used to read one line from`stdin` to `String`, and then parse it into the 
 
 ## Function signature
 
-`rtext::get`takes two arguments: The prompt and the Message, which is printed if the parse fails.
+`rtext::get` takes two arguments: The prompt and the Message, which is printed if the parse fails.
 
 ## Read as String
 
