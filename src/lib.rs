@@ -13,7 +13,7 @@ fn get_str(prompt: &str) -> String {
     return buffer.trim().to_string();
 }
 
-pub fn get<T: FromStr>(prompt: &str, err_promt: &str) -> T {
+pub fn get<T: FromStr>(prompt: &str, err_msg: &str) -> T {
     let i: String = get_str(prompt);
     let res = i.parse::<T>();
     let c;
