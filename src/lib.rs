@@ -1,4 +1,4 @@
-use std::io::{stdin, stdout, Write};
+use std::io::{stdin, stdout, Write, Read};
 use std::str::FromStr;
 
 
@@ -26,4 +26,27 @@ pub fn get<T: FromStr>(prompt: &str, err_msg: &str) -> T {
     }
     return c;
 }
+
+pub fn read_file_from_stdin() -> String {
+
+        let _ = stdout().flush().expect("Console flush failed.");
+
+        let mut buffer:String = String::new();
+        let _ = stdin().read_to_string(&mut buffer);
+
+        buffer.trim().to_string()
+                        
+}
+
+#[cfg(test)]
+mod tests {
+    use super::*;
+
+    #[test]
+    fn read_std () { // enter "sdf", newline, "sdf", newline, EOF
+        assert_eq!(read_file_from_stdin(), "sdf\nsdf")
+    }
+}
+
+
 
