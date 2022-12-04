@@ -20,8 +20,8 @@ pub fn get<T: FromStr>(prompt: &str, err_msg: &str) -> T {
     match res {
         Ok(a) => c = a,
         Err(_) =>{
-            println!("{}", err_promt);
-            c = get::<T>(prompt, err_promt);
+            println!("{}", err_msg);
+            c = get::<T>(prompt, err_msg);
         },
     }
     return c;
