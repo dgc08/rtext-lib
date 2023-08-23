@@ -4,7 +4,7 @@ I created this library to read input from the  Console in Rust customized to my 
 
 ## Installation
 
-Just add the following line to your `Cargo.toml`
+Just add the following line to your `Cargo.toml`-Dependencies
 
 `rtext = {git = "https://github.com/dgc08/rtext-lib"}`
 
